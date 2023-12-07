@@ -1,8 +1,11 @@
 import { View, Text } from 'react-native'
+import { useLocalSearchParams } from 'expo-router'
 import React from 'react'
-import HomeIcon from '../../assets/icons/home.svg'
 
-export default function Home() {
+
+export default function Page() {
+    const { id } = useLocalSearchParams();
+
   return (
     <View>
       <Text>Page</Text>

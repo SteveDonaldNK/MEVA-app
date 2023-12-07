@@ -10,6 +10,7 @@ const COLORS = {
     dark: "#000000",
 
     skyBlue: "#A2D2FF",
+    glass: "transparent",
 };
 
 const FONT = {
@@ -26,6 +27,7 @@ const SIZES = {
     xl: 22,
     xxl: 24,
     sxl: 32,
+    full: "100%",
 };
 
 const PADDINGS = {
