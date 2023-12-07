@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
-import { COLORS, PADDINGS, FONT, SIZES, IMAGES } from '../../constants';
+import { COLORS, PADDINGS, FONT, SIZES } from '../../constants';
 
 const styles = StyleSheet.create({
     frame: {
-        width: "100%",
-        height: "100%",
+        width: SIZES.full,
+        height: SIZES.full,
     },
     container: {
         padding: PADDINGS.page,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         fontSize: SIZES.xs,
     },
     btnContainer: {
-       width: "100%",
+       width: SIZES.full,
        display: "flex",
        gap: 15,
     }

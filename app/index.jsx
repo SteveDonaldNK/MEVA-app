@@ -1,6 +1,6 @@
 import { SafeAreaView, StatusBar } from 'react-native'
 import React from 'react'
-import Welcome from '../components/welcome/Welcome'
+import Welcome from '../components/Welcome/Welcome'
 import * as NavigationBar from 'expo-navigation-bar';
 import { COLORS } from '../constants';
 
@@ -9,7 +9,7 @@ export default function index() {
 
   return (
     <SafeAreaView>
-      <StatusBar translucent />
+      <StatusBar translucent barStyle={'light-content'} />
       <Welcome />
     </SafeAreaView>
   )

@@ -3,6 +3,7 @@ import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
+import SurveyProvider from '../contexts/SurveyProvider';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -39,17 +40,22 @@ export default function RootLayout() {
     return null;
   }
 
-  return <RootLayoutNav />;
+  return (
+    <SurveyProvider>
+      <RootLayoutNav />
+    </SurveyProvider>
+  )
 }
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    // <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{headerShown: false}}>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-      </Stack>
-    // </ThemeProvider>
+      // {/* <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}> */}
+        <Stack screenOptions={{headerShown: false, animation: 'fade'}}>
+            <Stack.Screen name="index" options={{ headerShown: false }} />
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> 
+        </Stack>
+      // {/* </ThemeProvider> */}
   );
 }
