@@ -4,7 +4,7 @@ import { COLORS } from '../../constants';
 
 export default function TabBar({ state, descriptors, navigation }) {
   return (
-    <View style={{ flexDirection: 'row', height: 52, backgroundColor: COLORS.white }}>
+    <View style={{ flexDirection: 'row', height: 52, backgroundColor: COLORS.white, borderTopWidth: 1, borderColor: 'rgba(208, 209, 212, 0.2)' }}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =

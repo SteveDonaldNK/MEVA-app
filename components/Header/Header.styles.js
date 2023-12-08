@@ -1,22 +1,27 @@
 import { StyleSheet } from "react-native";
-import { COLORS, FONT, PADDINGS, SIZES } from "../../constants";
+import { COLORS, FONT, SIZES } from "../../constants";
 
 export default styles = StyleSheet.create({
     container: {
-        paddingHorizontal: PADDINGS.page,
+        width: SIZES.full,
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        alignItems: "center"
     },
-    header: {
+    textContainer: {
+        display: "flex",
+        gap: 5
+    },
+    heading: {
         fontFamily: FONT.medium,
         fontSize: SIZES.lg,
+        color: COLORS.dark,
     },
-    link: {
-        borderBottomColor: COLORS.gray,
-        borderBottomWidth: 1
-    },
-    text: {
-        color: COLORS.gray
+    subHeading: {
+        fontFamily: FONT.regular,
+        fontSize: SIZES.xs,
+        color: COLORS.gray,
     }
+
 })

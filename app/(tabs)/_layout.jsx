@@ -24,7 +24,7 @@ export default function Layout() {
       hasAnswered ?
       <>
         <StatusBar translucent={false} barStyle="dark-content" />
-        <Tabs initialRouteName='Home/Home' tabBar={props=>
+        <Tabs tabBar={props=>
           <TabBar {...props} />} 
             screenOptions={{ 
               tabBarHideOnKeyboard: true,

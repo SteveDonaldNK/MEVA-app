@@ -1,15 +1,21 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import styles from './Header.styles'
-import { Link } from 'expo-router'
+import { CalendarIcon } from '../../constants/icons'
 
-export default function Header({heading, link}) {
+export default function Header({ heading, subHeading, icon }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>{heading}</Text>
-      <Link href={link} style={styles.link}>
-        <Text style={styles.text}>voir plus</Text>
-      </Link>
+        <View style={styles.textContainer}>
+            <Text style={styles.heading}>{heading}</Text>
+            <Text style={styles.subHeading}>{subHeading}</Text>
+        </View>
+        {
+            icon && 
+            <View>
+                <CalendarIcon />
+            </View>
+        }
     </View>
   )
 }

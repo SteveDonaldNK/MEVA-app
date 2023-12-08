@@ -7,6 +7,10 @@ import ContributionIcon from "../assets/icons/funding.svg";
 import CalendarIcon from "../assets/icons/calendar.svg";
 import LocationIcon from "../assets/icons/location.svg";
 import LensIcon from "../assets/icons/lens.svg";
+import ChevronRight from "../assets/icons/chevron-right.svg";
+import MicIcon from "../assets/icons/microphone.svg";
+import PrayIcon from "../assets/icons/pray.svg";
+import TestimonyIcon from "../assets/icons/testimony.svg";
 
 export {
     HomeIcon,
@@ -17,4 +21,8 @@ export {
     CalendarIcon,
     LocationIcon,
     LensIcon,
+    ChevronRight,
+    MicIcon,
+    PrayIcon,
+    TestimonyIcon,
 };

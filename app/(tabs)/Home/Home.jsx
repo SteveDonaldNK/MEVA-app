@@ -2,12 +2,12 @@ import { View, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import React from 'react'
 import Slider from '../../../components/Slider/Slider'
 import SearchBar from '../../../components/SearchBar/SearchBar'
-import Header from '../../../components/Header/Header'
 import DiscoveryCard from '../../../components/DiscoveryCard/DiscoveryCard'
 import HomeCard from './../../../components/HomeCard/HomeCard';
 import { events, messages, prayers, testimonies } from '../../../constants/data'
 import BookCard from '../../../components/BookCard/BookCard'
 import { COLORS, PADDINGS } from '../../../constants'
+import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 
 export default function Home() {
   const data = [messages[0], testimonies[0], prayers[0]]
@@ -24,11 +24,11 @@ export default function Home() {
         <View style={styles.content}>
           <Slider data={data} component={HomeCard}/>
           <View style={styles.section}>
-            <Header heading="Decouvrir" link='' />
+            <SectionHeader heading="Decouvrir" link='' />
             <Slider data={events} component={DiscoveryCard} />
           </View>
           <View style={styles.section}>
-            <Header heading="Lecture" link='' />
+            <SectionHeader heading="Lecture" link='' />
             <View style={styles.bookList}>
               {
                 [1,2,3].map((item, index) => (
