@@ -1,7 +1,7 @@
 import { View, Text, ImageBackground } from 'react-native'
 import React from 'react'
 import Button from '../Button/Button'
-import { COLORS, IMAGES } from '../../constants'
+import { IMAGES } from '../../constants'
 import _ from 'lodash'
 import styles from './BookCard.styles'
 

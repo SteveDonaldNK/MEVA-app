@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import { View, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './SearchBar.styles'
 import { LensIcon } from '../../constants/icons'

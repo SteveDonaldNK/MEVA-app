@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import React from 'react'
-import { PADDINGS, SIZES } from '../../constants'
+import { SIZES } from '../../constants'
 import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Overlay() {

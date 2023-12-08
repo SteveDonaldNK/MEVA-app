@@ -1,7 +1,5 @@
-import { View, Text, ScrollView, Image, FlatList } from 'react-native'
+import { View, FlatList } from 'react-native'
 import React from 'react'
-import { PADDINGS, SIZES } from '../../constants'
-import data from '../../constants/data'
 
 export default function Slider({data, component: Card}) {
 

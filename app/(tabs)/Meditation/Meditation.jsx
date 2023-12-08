@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native'
+import { View, StyleSheet, SafeAreaView } from 'react-native'
 import { COLORS, PADDINGS, SIZES } from '../../../constants'
 import React from 'react'
 import Header from '../../../components/Header/Header'

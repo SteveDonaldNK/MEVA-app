@@ -8,6 +8,7 @@ import { events, messages, prayers, testimonies } from '../../../constants/data'
 import BookCard from '../../../components/BookCard/BookCard'
 import { COLORS, PADDINGS } from '../../../constants'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
+import BookList from './../../../components/BookList/BookList';
 
 export default function Home() {
   const data = [messages[0], testimonies[0], prayers[0]]
@@ -30,11 +31,7 @@ export default function Home() {
           <View style={styles.section}>
             <SectionHeader heading="Lecture" link='' />
             <View style={styles.bookList}>
-              {
-                [1,2,3].map((item, index) => (
-                  <BookCard key={index}/>
-                ))
-              }
+              <BookList />
             </View>
           </View>
         </View>
