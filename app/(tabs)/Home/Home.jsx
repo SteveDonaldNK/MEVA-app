@@ -1,14 +1,13 @@
-import { View, Text, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
-import React, { useEffect } from 'react'
+import { View, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
+import React from 'react'
 import Slider from '../../../components/Slider/Slider'
 import SearchBar from '../../../components/SearchBar/SearchBar'
 import Header from '../../../components/Header/Header'
-import { COLORS, PADDINGS } from '../../../constants'
 import DiscoveryCard from '../../../components/DiscoveryCard/DiscoveryCard'
 import HomeCard from './../../../components/HomeCard/HomeCard';
 import { events, messages, prayers, testimonies } from '../../../constants/data'
 import BookCard from '../../../components/BookCard/BookCard'
-import BookList from '../../../components/BookList/BookList'
+import { COLORS, PADDINGS } from '../../../constants'
 
 export default function Home() {
   const data = [messages[0], testimonies[0], prayers[0]]
