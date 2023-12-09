@@ -10,7 +10,7 @@ export default function Button({ style, name, bg, border,variant, onPress}) {
     const borderColor = border || COLORS.white
 
   return (
-    <TouchableOpacity onPress={() => {
+    <TouchableOpacity activeOpacity={0.85} onPress={() => {
       onPress && onPress()
     }} style={{ display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: bg, borderColor, borderRadius, ...styles.btn, ...style }}>
         <Text style={{...styles.btnTitle, color}}>{_.capitalize(name)}</Text>

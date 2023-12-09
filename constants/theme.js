@@ -14,6 +14,7 @@ const COLORS = {
 };
 
 const FONT = {
+    thin: "PolySansTrialThin",
     regular: "PolySansTrialRegular",
     medium: "PolySansTrialMedium",
     bold: "PolySansTrialBold",

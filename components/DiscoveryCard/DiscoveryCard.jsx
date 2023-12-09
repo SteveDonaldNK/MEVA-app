@@ -13,7 +13,7 @@ export default function DiscoveryCard({item}) {
       <View style={styles.content}>
         <View style={styles.textContainer}>
           <Text style={styles.title}>{_.capitalize(item.title)}</Text>
-          <Text style={styles.text}>{_.truncate(_.capitalize(item.content), {length: 100})}</Text>
+          <Text style={styles.text}>{_.truncate(_.capitalize(item.content), {length: 100, separator: ' '})}</Text>
         </View>
         <View style={styles.locationContainer}>
           <LocationIcon fill={COLORS.white} height={20} width={20} />

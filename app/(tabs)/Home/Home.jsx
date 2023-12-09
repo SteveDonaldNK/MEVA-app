@@ -5,7 +5,6 @@ import SearchBar from '../../../components/SearchBar/SearchBar'
 import DiscoveryCard from '../../../components/DiscoveryCard/DiscoveryCard'
 import HomeCard from './../../../components/HomeCard/HomeCard';
 import { events, messages, prayers, testimonies } from '../../../constants/data'
-import BookCard from '../../../components/BookCard/BookCard'
 import { COLORS, PADDINGS } from '../../../constants'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import BookList from './../../../components/BookList/BookList';

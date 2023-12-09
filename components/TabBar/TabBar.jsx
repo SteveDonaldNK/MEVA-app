@@ -37,6 +37,7 @@ export default function TabBar({ state, descriptors, navigation }) {
 
         return (
           <Pressable
+            key={index}
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}

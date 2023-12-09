@@ -11,6 +11,7 @@ import ChevronRight from "../assets/icons/chevron-right.svg";
 import MicIcon from "../assets/icons/microphone.svg";
 import PrayIcon from "../assets/icons/pray.svg";
 import TestimonyIcon from "../assets/icons/testimony.svg";
+import MoreIcon from "../assets/icons/more.svg";
 
 export {
     HomeIcon,
@@ -25,4 +26,5 @@ export {
     MicIcon,
     PrayIcon,
     TestimonyIcon,
+    MoreIcon,
 };

@@ -23,6 +23,7 @@ export default function RootLayout() {
     "PolySansTrialBold": require('../assets/fonts/PolySansTrial-Bulky.otf'),
     "PolySansTrialMedium": require('../assets/fonts/PolySansTrial-Median.otf'),
     "PolySansTrialRegular": require('../assets/fonts/PolySansTrial-Neutral.otf'),
+    "PolySansTrialThin": require('../assets/fonts/PolySansTrial-Slim.otf'),
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
