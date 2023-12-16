@@ -7,7 +7,7 @@ export function userSurvey() {
 }
 
 export default SurveyProvider = ({children}) => {
-    const [hasAnswered, setHasAnswered] = useState(true);
+    const [hasAnswered, setHasAnswered] = useState(false);
 
     return (
         <SurveyContext.Provider value={{hasAnswered, setHasAnswered}}>

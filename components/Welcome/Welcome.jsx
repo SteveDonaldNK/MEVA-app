@@ -5,8 +5,10 @@ import { COLORS, IMAGES } from '../../constants';
 import Button from '../Button/Button';
 import { WELCOME } from '../../constants/texts';
 import GradientText from '../GradientText/GradientText';
+import { userSurvey } from '../../contexts/SurveyProvider';
 
 export default function Welcome() {
+  const { setHasAnswered } = userSurvey();
 
   return (
     <View style={styles.frame}>
@@ -16,6 +18,7 @@ export default function Welcome() {
                 <Text style={[styles.paragraph, styles.text]}>{WELCOME.paragraph}</Text>
                 <View style={styles.btnContainer}>
                     <Button onPress={() => {
+                      setHasAnswered(true);
                     }} name={'Ancien'} bg={COLORS.white} />                    
                     <Button name={'Nouveau'} />                    
                 </View>
