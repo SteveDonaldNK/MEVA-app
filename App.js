@@ -1,13 +1,12 @@
 import * as SplashScreen from 'expo-splash-screen';
-import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SurveyProvider, { userSurvey } from './contexts/SurveyProvider';
-import Main from './Main';
-import { Onboarding } from './screens';
+import { Onboarding,  } from './screens';
+import Tabs from './navigation/Tabs'
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -45,22 +44,15 @@ export default function App() {
 
 function RootNavigator() {
   const { hasAnswered } = userSurvey();
+  const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      {
-        hasAnswered ? <Main /> : <OnboardingStack />
-      }
+      <Stack.Navigator initialRouteName='onboarding' screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
+        {
+          hasAnswered ? <Stack.Screen name='Tabs' component={Tabs} /> : <Stack.Screen name='onboarding' component={Onboarding} />
+        }
+      </Stack.Navigator>
     </NavigationContainer>
-  )
-}
-
-function OnboardingStack() {
-  const Stack = createNativeStackNavigator()
-  
-  return(
-    <Stack.Navigator screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
-      <Stack.Screen name='onboarding' component={Onboarding} />
-    </Stack.Navigator>
   )
 }

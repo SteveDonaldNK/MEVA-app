@@ -7,7 +7,7 @@ import { WELCOME } from '../../constants/texts';
 import GradientText from '../GradientText/GradientText';
 import { userSurvey } from '../../contexts/SurveyProvider';
 
-export default function Welcome() {
+export default function Welcome({navigation}) {
   const { setHasAnswered } = userSurvey();
 
   return (
