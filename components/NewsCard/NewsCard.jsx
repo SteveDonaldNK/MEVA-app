@@ -4,10 +4,14 @@ import styles from './NewsCard.styles'
 import { COLORS, IMAGES } from '../../constants'
 import { MoreIcon } from '../../constants/icons'
 import _ from 'lodash'
+import Carousel from '../Carousel/Carousel'
 
-export default function NewsCard({news}) {
+export default function NewsCard({ news }) {
     
     const [expanded, setExpanded] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [itemLink, setItemLink] = useState('');
+
     const row1 = news.images.slice(0, 2);
     const row2 = news.images.slice(2, 5);
 
@@ -29,8 +33,14 @@ export default function NewsCard({news}) {
         )
     }
 
+    function openModal(link) {
+        setIsOpen(true);
+        setItemLink(link)
+    }
+
   return (
     <View style={styles.container}>
+        <Carousel isOpen={isOpen} setIsOpen={setIsOpen} images={news.images} itemIndex={news.images.indexOf(itemLink)} />
         <View style={styles.postHeader}>
             <Image style={styles.img} source={IMAGES.Avatar} resizeMode='cover' />
             <View style={styles.postInfo}>
@@ -56,7 +66,7 @@ export default function NewsCard({news}) {
                 <View style={styles.topRow}>
                     {
                         row1.map((link, index) => (
-                            <TouchableOpacity activeOpacity={0.5} style={{flex: 1, backgroundColor: COLORS.dark}} key={index} >
+                            <TouchableOpacity onPress={() => openModal(link)} activeOpacity={0.5} style={{flex: 1, backgroundColor: COLORS.dark}} key={index} >
                                 <Image resizeMode='cover' style={styles.postMedia} source={{uri: link}}  />
                             </TouchableOpacity>
                         ))
@@ -66,7 +76,7 @@ export default function NewsCard({news}) {
                     <View style={styles.bottomRow}>
                         {
                             row2.map((link, index) => (
-                                <TouchableOpacity activeOpacity={0.5} style={{flex: 1, backgroundColor: COLORS.dark}} key={index} >
+                                <TouchableOpacity onPress={() => openModal(link)} activeOpacity={0.5} style={{flex: 1, backgroundColor: COLORS.dark}} key={index} >
                                     <View style={{flex: 1}}>
                                         <Image resizeMode='cover' style={styles.postMedia} source={{uri: link}}  />
                                         {index === row2.length - 1 && <View style={styles.additionalImages}><Text style={styles.imagesLeft}>+{news.images.length - 5}</Text></View>}

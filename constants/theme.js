@@ -10,6 +10,7 @@ const COLORS = {
     dark: "#000000",
 
     skyBlue: "#A2D2FF",
+    blue: "#47AEF3",
     glass: "transparent",
 };
 

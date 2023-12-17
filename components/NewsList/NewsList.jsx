@@ -3,7 +3,7 @@ import React from 'react'
 import { news } from '../../constants/data'
 import NewsCard from '../NewsCard/NewsCard'
 
-export default function NewsList() {
+export default function NewsList({ setIsOpen, setImages }) {
   return (
     <FlatList
         showsVerticalScrollIndicator={false}
