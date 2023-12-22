@@ -1,3 +1,5 @@
+import { IMAGES } from "."
+
 const prayers = [{
     id: 1,
     category: 'prayer',
@@ -133,10 +135,22 @@ const news = [{
     images: ["https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/flagged/photo-1570562119798-a4b2a542fe3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2VsY29tZSUyMGFmcmljYXxlbnwwfHwwfHx8MA%3D%3D", "https://images.unsplash.com/photo-1504087825736-ec698faffd4c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1547382002-b908c9367d83?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1508985307703-52d13b2b06b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1508829040592-72f179f8a73f?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
 }]
 
+const library = [{
+    category: 'Bibles',
+    image: IMAGES.library.Category,
+}, {
+    category: 'Cantiques',
+    image: IMAGES.library.Category1,
+}, {
+    category: 'Livres',
+    image: IMAGES.library.Category2,
+}]
+
 export {
     messages,
     prayers,
     testimonies,
     events,
     news,
+    library,
 }

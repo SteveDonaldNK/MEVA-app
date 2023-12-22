@@ -4,7 +4,6 @@ import { COLORS, PADDINGS, SIZES } from "../../constants";
 export default styles = StyleSheet.create({
     container: {
         backgroundColor: COLORS.white,
-        paddingVertical: PADDINGS.page/2,
         paddingHorizontal: PADDINGS.page,
     },
     innerContent: {

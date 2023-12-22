@@ -12,7 +12,7 @@ export default function Slider({data, component: Card}) {
           renderItem={({item}) => (
             <Card item={item} />
           )}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.id || data.indexOf(item)}
           contentContainerStyle={{ columnGap: 10, paddingHorizontal: 24}}
           horizontal
         />

@@ -14,12 +14,11 @@ export default function Home() {
   
   return (
     <SafeAreaView style={styles.frame}>
-      <SearchBar />
       <ScrollView 
         showsVerticalScrollIndicator={false} 
-        style={styles.container}
       >
         <View style={styles.content}>
+          <SearchBar />
           <Slider data={data} component={HomeCard}/>
           <View style={styles.section}>
             <SectionHeader heading="Decouvrir" link='' />
@@ -41,15 +40,12 @@ const styles = StyleSheet.create({
   frame: {
     height: "100%",
     width: "100%",
-  },
-  container: {
-    backgroundColor: COLORS.white
+    backgroundColor: COLORS.white,
   },
   content: {
     display: "flex", 
     gap: PADDINGS.element, 
     paddingVertical: PADDINGS.page, 
-    backgroundColor: COLORS.white
   },
   section: {
     display: "flex", 

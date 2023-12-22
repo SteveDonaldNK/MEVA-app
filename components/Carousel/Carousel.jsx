@@ -11,12 +11,12 @@ function Slide({uri}) {
     return (
         <View style={styles.slide}>
             <Image
-            resizeMode='contain'
-            onLoad={() => {
-                setLoaded(true)
-            }}
-            style={loaded ? styles.image : {display: 'none'}}
-            source={{ uri }}
+                resizeMode='contain'
+                onLoad={() => {
+                    setLoaded(true)
+                }}
+                style={loaded ? styles.image : {display: 'none'}}
+                source={{ uri }}
             />
             {
                 !loaded &&

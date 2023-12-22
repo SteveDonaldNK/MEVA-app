@@ -3,9 +3,9 @@ import React from 'react'
 import styles from './SearchBar.styles'
 import { LensIcon } from '../../constants/icons'
 
-export default function SearchBar() {
+export default function SearchBar({style}) {
   return (
-      <View style={styles.container}>
+      <View style={{...styles.container, ...style}}>
         <View style={styles.innerContent}>
           <TextInput style={styles.input} placeholder='Rechercher' placeholderTextColor={'rgba(114, 116, 127, 0.5)'} />
           <TouchableOpacity>

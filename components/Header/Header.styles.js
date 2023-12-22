@@ -15,7 +15,7 @@ export default styles = StyleSheet.create({
     },
     heading: {
         fontFamily: FONT.medium,
-        fontSize: SIZES.lg,
+        fontSize: SIZES.xl,
         color: COLORS.dark,
     },
     subHeading: {
