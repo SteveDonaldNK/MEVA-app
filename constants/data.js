@@ -146,6 +146,50 @@ const library = [{
     image: IMAGES.library.Category2,
 }]
 
+const books = [{
+    name: 'LA SAINTE BIBLE',
+    author: 'Louis Segond',
+    img: IMAGES.Bible,
+    category: 'bible',
+    id: 1,
+}, {
+    name: 'CANTIQUE',
+    author: 'Chants de victoire',
+    img: IMAGES.Hymn,
+    category: 'hymn',
+    id: 2,
+}, {
+    name: 'le chemin du calvaire',
+    author: 'Jerry Nolan',
+    img: IMAGES.Book,
+    category: 'book',
+    id: 3,
+}, {
+    name: 'le chemin du calvaire',
+    author: 'Jerry Nolan',
+    img: IMAGES.Book,
+    category: 'book',
+    id: 4,
+}, {
+    name: 'le chemin du calvaire',
+    author: 'Jerry Nolan',
+    img: IMAGES.Book,
+    category: 'book',
+    id: 5,
+}, {
+    name: 'le chemin du calvaire',
+    author: 'Jerry Nolan',
+    img: IMAGES.Book,
+    category: 'book',
+    id: 6,
+}, {
+    name: 'le chemin du calvaire',
+    author: 'Jerry Nolan',
+    img: IMAGES.Book,
+    category: 'book',
+    id: 7,
+}]
+
 export {
     messages,
     prayers,
@@ -153,4 +197,5 @@ export {
     events,
     news,
     library,
+    books,
 }

@@ -4,7 +4,7 @@ import styles from './LibraryCategoryCard.styles'
 
 export default function LibraryCategoryCard({item}) {
   return (
-    <ImageBackground resizeMode='cover' source={item.image} style={styles.card}>
+    <ImageBackground fadeDuration={0} resizeMode='cover' source={item.image} style={styles.card}>
       <Text style={styles.label}>{item.category}</Text>
     </ImageBackground>
   )

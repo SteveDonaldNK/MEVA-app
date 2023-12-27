@@ -8,7 +8,7 @@ export default function Header({ heading, subHeading, icon, style, headingStyle}
     <View style={{...styles.container, ...style}}>
         <View style={styles.textContainer}>
             <Text style={{...styles.heading, ...headingStyle}}>{heading}</Text>
-            <Text style={styles.subHeading}>{subHeading}</Text>
+            { subHeading && <Text style={styles.subHeading}>{subHeading}</Text>}
         </View>
         {
             icon && 
