@@ -15,6 +15,8 @@ import Category from "../assets/images/category.jpg";
 import Category1 from "../assets/images/category1.jpg";
 import Category2 from "../assets/images/category2.jpg";
 
+import funding from "../assets/images/funding.png"
+
 const message = [message1, message2, message3];
 const prayer = [prayer1, prayer2];
 const library = {Category, Category1, Category2}
@@ -30,4 +32,5 @@ export default {
     Hymn,
     Book,
     Avatar,
+    funding,
 };
