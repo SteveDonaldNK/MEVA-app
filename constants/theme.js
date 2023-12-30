@@ -19,6 +19,11 @@ const FONT = {
     regular: "PolySansTrialRegular",
     medium: "PolySansTrialMedium",
     bold: "PolySansTrialBold",
+    articleThin: "InterThin",
+    articleRegular: "InterRegular",
+    articleMedium: "InterMedium",
+    articleSemiBold: "InterSemiBold",
+    articleBold: "InterBold"
 };
 
 const SIZES = {

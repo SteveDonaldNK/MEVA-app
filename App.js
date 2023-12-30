@@ -16,6 +16,11 @@ export default function App() {
     "PolySansTrialMedium": require('./assets/fonts/PolySansTrial-Median.otf'),
     "PolySansTrialRegular": require('./assets/fonts/PolySansTrial-Neutral.otf'),
     "PolySansTrialThin": require('./assets/fonts/PolySansTrial-Slim.otf'),
+    "InterBold": require('./assets/fonts/Inter-Bold.ttf'),
+    "InterMedium": require('./assets/fonts/Inter-Medium.ttf'),
+    "InterSemiBold": require('./assets/fonts/Inter-SemiBold.ttf'),
+    "InterRegular": require('./assets/fonts/Inter-Regular.ttf'),
+    "InterThin": require('./assets/fonts/Inter-Light.ttf'),
   });
 
   useEffect(() => {

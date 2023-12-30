@@ -14,7 +14,7 @@ export default styles = StyleSheet.create({
         paddingVertical: PADDINGS.sm,
         paddingHorizontal: PADDINGS.page,
         display: "flex",
-        gap: PADDINGS.sm,
+        gap: PADDINGS.sm - 5,
     },
     postHeader: {
         ...flexbox,
@@ -32,24 +32,24 @@ export default styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     userName: {
-        fontFamily: FONT.medium,
+        fontFamily: FONT.articleBold,
         fontSize: SIZES.xs,
         color: COLORS.dark,
     },
     time: {
-        fontFamily: FONT.regular,
+        fontFamily: FONT.articleRegular,
         fontSize: SIZES.xs,
         color: COLORS.tertiary,
     },
     postBody: {
-        fontFamily: FONT.thin,
+        fontFamily: FONT.articleMedium,
         fontSize: SIZES.xs,
         color: COLORS.dark,
     },
     readMore: {
-        fontFamily: FONT.regular,
+        fontFamily: FONT.articleMedium,
         fontSize: SIZES.xs,
-        color: COLORS.tertiary,
+        color: COLORS.gray,
     },
     postMediaContainer: {
         width: SIZES.full,
