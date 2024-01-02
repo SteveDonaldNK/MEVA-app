@@ -1,8 +1,10 @@
-import { View, SafeAreaView, StyleSheet, Dimensions, Text, Image } from 'react-native'
+import { View, SafeAreaView, StyleSheet, Dimensions, Text, Image, TouchableOpacity } from 'react-native'
 import Animated, { interpolate, interpolateColor, useAnimatedRef, useAnimatedStyle, useScrollViewOffset } from 'react-native-reanimated'
-import React from 'react'
+import React, { useState } from 'react'
 import { COLORS, FONT, IMAGES, PADDINGS, SIZES } from '../constants'
+import { CONTRIBUTION } from '../constants/texts'
 import Header from '../components/Header/Header'
+import Draggable from 'react-native-draggable';
 
 const { height, width } = Dimensions.get('window');
 const IMG_HEIGHT = height/2;
@@ -58,46 +60,91 @@ export default function Contribution() {
   })
 
   return (
-    <SafeAreaView>
+    <>
+    <SafeAreaView style={Styles.container}>
       <Header 
         headerAnimatedStyle={headerAnimatedStyle}
         textAnimatedStyle={textAnimatedStyle}
         style={{ position: "absolute", padding: 24, paddingBottom: 12, zIndex: 20, borderBottomWidth: 1 }} 
-        heading={"Contributions"} />
-      <Animated.ScrollView 
-        ref={scrollRef} scrollEventThrottle={16} 
-        showsVerticalScrollIndicator={false} 
-        style={Styles.container}>
+        heading={"Contributions"} 
+      />
+      <Animated.ScrollView
+        scrollEventThrottle={16} 
+        ref={scrollRef} 
+        showsVerticalScrollIndicator={false}>
           <Animated.Image
             style={[Styles.imgBg, imageAnimatedStyle]} 
             source={IMAGES.funding} 
           />
-          <View style={Styles.textContainer}>
-            <Text style={Styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut vel animi architecto hic, quam earum sapiente, debitis facilis iusto quibusdam nulla ratione nobis doloremque. Tenetur fugit cupiditate recusandae tempora pariatur at. Impedit quia incidunt sed, placeat aut necessitatibus, vitae neque, quae ipsa similique esse pariatur. Vel animi nihil ipsa nesciunt recusandae? Quas in, ipsum quisquam sit similique nihil eos vitae hic voluptatum fugiat ut veniam sed eveniet est placeat expedita corporis maxime nesciunt quam, officia quis doloremque. Quae ex doloribus alias incidunt pariatur totam obcaecati molestias laborum perferendis? Inventore quod dolorum alias explicabo, quidem, distinctio maxime nesciunt ut aliquam eligendi possimus earum aperiam! Nesciunt tenetur aspernatur error voluptatibus nobis ea praesentium ratione. Repellat necessitatibus, consectetur illum fugit amet vero omnis, officiis optio deleniti cum reiciendis rerum quidem inventore. Odit recusandae temporibus alias inventore dolor corrupti voluptate in ad? Quo error dicta esse tenetur fugit, maxime nobis repudiandae. Dolorem, adipisci cum quia accusamus placeat incidunt dolorum rerum architecto? Nisi tempore laudantium aspernatur modi veritatis alias voluptatum odio. Nostrum distinctio porro consectetur perferendis dolorem culpa velit, architecto iste rem ratione et molestiae repellat! Atque porro sapiente asperiores laboriosam quidem accusantium error facere aliquam! Maiores impedit vel cupiditate sequi, deleniti aspernatur eos harum itaque porro illum quae optio assumenda, ut mollitia eum nisi fuga eligendi eaque. Cupiditate, facere perferendis. Quae culpa deleniti sit labore, quo commodi aliquid nobis sunt officiis reprehenderit, debitis perferendis enim reiciendis accusamus molestiae aspernatur soluta dolorem asperiores eum! Nemo expedita, quibusdam illo temporibus quasi pariatur quia cum vel facilis voluptates adipisci dolores nobis iste magnam cumque et natus ipsam facere! Asperiores earum temporibus qui doloribus ut dolores assumenda dolor laudantium rem! Explicabo officiis quis asperiores natus ab obcaecati blanditiis commodi fugit fuga perferendis quod saepe quidem, facere unde veritatis qui assumenda amet minus pariatur officia impedit sequi autem aliquam? Tempora inventore atque quisquam dolorum, totam culpa hic cumque recusandae blanditiis voluptate voluptatum voluptates excepturi natus nobis error, aperiam iste earum similique quos, ea repellendus consequuntur? Vero, sit quae ipsa debitis cumque fugiat labore perspiciatis reiciendis minima, maxime error! Assumenda alias illum voluptatum dolor suscipit sequi ea iure, nobis eos eligendi, voluptatem harum iste ex quae saepe sunt perspiciatis, similique fugiat facilis sapiente! Quo impedit dolorem possimus animi saepe hic itaque sed pariatur quas, nesciunt recusandae illo iure, laborum fugit quae ipsum. Laudantium neque libero quo doloremque tenetur doloribus expedita cumque earum ab enim atque sequi, omnis aliquid distinctio error voluptate quia unde nostrum. Quaerat quod est voluptates nobis ab obcaecati commodi consequuntur. Eligendi excepturi nostrum ratione, amet ad repellat optio enim. Maxime, sunt soluta consequatur mollitia dolor aliquam quidem doloremque ipsam libero fugit quas laudantium autem in, illum pariatur esse quam rem suscipit aspernatur asperiores eum hic et voluptate maiores! Aspernatur sunt, cupiditate voluptatum quae iure omnis similique beatae veniam laborum numquam incidunt facilis neque dolorum cum perferendis assumenda magnam debitis nam quidem odio distinctio, hic voluptates voluptatem ea. Eaque fuga, blanditiis aliquam est dolore impedit deserunt animi. Corporis ipsa aliquam molestias voluptatibus consequatur id itaque eaque quasi.</Text>
-          </View>
+          {
+            CONTRIBUTION.map(({heading, body}, key) => (
+              <View style={Styles.textContainer} key={key}>
+                <View>
+                  <Text style={Styles.heading}>{heading}</Text>
+                  <Text style={Styles.text}>{body}</Text>
+                </View>
+              </View>
+            ))
+          }
       </Animated.ScrollView>
+      
     </SafeAreaView>
+    <Draggable x={width-80} y={height-170} maxX={width} maxY={height-80}>
+    <TouchableOpacity style={Styles.donationBtn}>
+      <Image style={Styles.donationImg} source={IMAGES.donation} />
+    </TouchableOpacity>
+  </Draggable>
+  </>
   )
 }
 
 const Styles = StyleSheet.create({
   container: {
-    height: SIZES.full,
-    width: SIZES.full,
-    backgroundColor: COLORS.white,
-  },
+    width,
+    backgroundColor: COLORS.dark,
+    display: "flex",
+    },
   imgBg: {
     width,
     height: IMG_HEIGHT,
     resizeMode: "cover", 
   },
   textContainer: {
-    width,
+    height: height/2,
     backgroundColor: COLORS.white,
-    padding:PADDINGS.page/2,
+    paddingVertical:PADDINGS.sm,
+    paddingHorizontal: 12,
+    display: "flex",
+    flexDirection: "column",
+    gap: 10,
   },
   text: {
-    fontFamily: FONT.articleMedium,
+    fontFamily: FONT.articleRegular,
     fontSize: SIZES.xs
   },
+  heading: {
+    fontFamily: FONT.articleBold,
+    fontSize: SIZES.lg,
+    marginBottom: 2
+  }, 
+  donationBtn: {
+    height: 55,
+    width: 55,
+    padding: 10,
+    backgroundColor: COLORS.white,
+    padding: 10,
+    borderRadius: 50,
+    shadowColor: COLORS.dark,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity:  0.17,
+    shadowRadius: 3.05,
+    elevation: 4,
+  },
+  donationImg: {
+    height: SIZES.full,
+    width: SIZES.full,
+  }
 })

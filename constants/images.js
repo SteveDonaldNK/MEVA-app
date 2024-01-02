@@ -16,6 +16,7 @@ import Category1 from "../assets/images/category1.jpg";
 import Category2 from "../assets/images/category2.jpg";
 
 import funding from "../assets/images/funding2.jpg"
+import donation from "../assets/images/donation.png"
 
 const message = [message1, message2, message3];
 const prayer = [prayer1, prayer2];
@@ -33,4 +34,5 @@ export default {
     Book,
     Avatar,
     funding,
+    donation,
 };

@@ -42,7 +42,7 @@ export default styles = StyleSheet.create({
         color: COLORS.tertiary,
     },
     postBody: {
-        fontFamily: FONT.articleMedium,
+        fontFamily: FONT.articleRegular,
         fontSize: SIZES.xs,
         color: COLORS.dark,
     },

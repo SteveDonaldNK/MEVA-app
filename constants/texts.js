@@ -27,8 +27,14 @@ const MEDITATION = {
     ]
 }
 
+const CONTRIBUTION = [{
+    heading: "The Power of Donations: A Catalyst for Change",
+    body: "In a world grappling with a multitude of challenges, from poverty and hunger to disease and environmental degradation, the act of donation stands as a beacon of hope, a testament to humanity's inherent capacity for compassion and generosity. Donations, in their myriad forms, empower individuals and organizations to make a tangible difference in the lives of others, fostering positive change and propelling communities towards a brighter future."
+}]
+
 
 export {
     WELCOME,
     MEDITATION,
+    CONTRIBUTION,
 }
