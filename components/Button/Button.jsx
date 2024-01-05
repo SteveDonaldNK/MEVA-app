@@ -4,8 +4,7 @@ import styles from './Button.styles'
 import { COLORS } from '../../constants'
 import _ from 'lodash'
 
-export default function Button({ style, name, bg, border,variant, onPress}) {
-    const color = bg ? COLORS.dark : COLORS.white
+export default function Button({ style, name, bg, border,variant, onPress, color}) {
     const borderRadius = variant === 'pill' ? 50 : 0;
     const borderColor = border || COLORS.white
 

@@ -1,7 +1,7 @@
 import { View, Text, ImageBackground } from 'react-native'
 import React from 'react'
 import Button from '../Button/Button'
-import { IMAGES } from '../../constants'
+import { COLORS, IMAGES } from '../../constants'
 import _ from 'lodash'
 import styles from './BookCard.styles'
 
@@ -38,7 +38,7 @@ export default function BookCard() {
             <Text style={styles.title}>{_.upperCase(title)}</Text>
             <Text style={styles.version}>{(type === "book" ? "Editeur: " : "Version: ") + version}</Text>
         </View>
-        <Button variant="pill" style={styles.btn} name="Lire"/>
+        <Button color={COLORS.white} variant="pill" style={styles.btn} name="Lire"/>
       </View>
     </View>
   )

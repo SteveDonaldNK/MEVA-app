@@ -7,7 +7,6 @@ import _ from 'lodash'
 import Carousel from '../Carousel/Carousel'
 
 export default function NewsCard({ news }) {
-    
     const [expanded, setExpanded] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [itemLink, setItemLink] = useState('');
