@@ -106,7 +106,7 @@ export default function Contribution() {
 const Styles = StyleSheet.create({
   frame: {
     flex: 1,
-    backgroundColor: COLORS.dark,
+    backgroundColor: COLORS.white,
   },
   header: { 
     position: "absolute", 
