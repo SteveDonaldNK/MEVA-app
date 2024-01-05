@@ -61,11 +61,11 @@ export default function Contribution() {
 
   return (
     <>
-    <SafeAreaView style={Styles.frame}>
+    <SafeAreaView style={styles.frame}>
       <Header 
         headerAnimatedStyle={headerAnimatedStyle}
         textAnimatedStyle={textAnimatedStyle}
-        style={Styles.header} 
+        style={styles.header} 
         heading={"Contributions"} 
       />
       <Animated.ScrollView
@@ -73,24 +73,24 @@ export default function Contribution() {
         ref={scrollRef} 
         showsVerticalScrollIndicator={false}>
           <Animated.Image
-            style={[Styles.imgBg, imageAnimatedStyle]} 
+            style={[styles.imgBg, imageAnimatedStyle]} 
             source={IMAGES.funding} 
           />
           {
             CONTRIBUTION.map(({heading, body}, key) => (
-              <View style={Styles.textContainer} key={key}>
+              <View style={styles.textContainer} key={key}>
                 <View>
-                  <Text style={Styles.heading}>{heading}</Text>
-                  <Text style={Styles.text}>{body}</Text>
+                  <Text style={styles.heading}>{heading}</Text>
+                  <Text style={styles.text}>{body}</Text>
                 </View>
               </View>
             ))
           }
       </Animated.ScrollView>
-      <View style={Styles.bottomBtn}>
-        <View style={Styles.btnContainer}>
+      <View style={styles.bottomBtn}>
+        <View style={styles.btnContainer}>
           <Button 
-            style={Styles.contributeBtn} 
+            style={styles.contributeBtn} 
             color={COLORS.white} 
             bg={COLORS.primary} 
             border={COLORS.primary} 
@@ -103,7 +103,7 @@ export default function Contribution() {
   )
 }
 
-const Styles = StyleSheet.create({
+const styles = StyleSheet.create({
   frame: {
     flex: 1,
     backgroundColor: COLORS.white,
