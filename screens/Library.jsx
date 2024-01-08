@@ -1,4 +1,4 @@
-import { View, SafeAreaView, StyleSheet, ScrollView, Dimensions } from 'react-native'
+import { View, SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import Header from '../components/Header/Header'
 import SearchBar from '../components/SearchBar/SearchBar'
@@ -8,11 +8,10 @@ import { COLORS, PADDINGS, SIZES } from '../constants'
 import LibraryCategoryCard from '../components/LibraryCategoryCard/LibraryCategoryCard'
 import LibraryBookList from '../components/LibraryBookList/LibraryBookList'
 
-const { width } = Dimensions.get('window');
 export default function Library() {
   return (
-    <SafeAreaView>
-      <ScrollView style={styles.container}>
+    <SafeAreaView style={styles.frame}>
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           <Header style={styles.header} heading={"Bibliotheque"} subHeading={"Livres chretiens, Bibles et cantiques"} />
           <SearchBar />
@@ -28,10 +27,12 @@ export default function Library() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: SIZES.full,
-    height: SIZES.full,
+  frame: {
+    flex: 1,
     backgroundColor: COLORS.white,
+  },
+  container: {
+    flex: 1,
     paddingVertical: PADDINGS.page,
   },
   content: {
@@ -48,9 +49,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: PADDINGS.page,
     display: "flex",
     flexDirection: "row",
-    rowGap: PADDINGS.sm,
-    columnGap: width * 0.0312,
+    rowGap: PADDINGS.page,
+    columnGap: PADDINGS.gapMd,
     flexWrap: "wrap",
-    paddingBottom: 50,
+    paddingBottom: 30,
   }
 })

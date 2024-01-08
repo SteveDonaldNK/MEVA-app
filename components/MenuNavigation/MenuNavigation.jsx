@@ -11,6 +11,7 @@ export default function MenuNavigation({links}) {
         links.map((link, index) => (
             <View key={index} style={styles.btn}>
                 <TouchableNativeFeedback
+                    onPress={() => null}
                     background={TouchableNativeFeedback.Ripple(
                     COLORS.lightGray,
                     true,

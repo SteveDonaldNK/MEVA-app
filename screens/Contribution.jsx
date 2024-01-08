@@ -1,4 +1,4 @@
-import { View, SafeAreaView, StyleSheet, Dimensions, Text } from 'react-native'
+import { View, SafeAreaView, StyleSheet, Text } from 'react-native'
 import Animated, { interpolate, interpolateColor, useAnimatedRef, useAnimatedStyle, useScrollViewOffset } from 'react-native-reanimated'
 import React from 'react'
 import { COLORS, FONT, IMAGES, PADDINGS, SIZES } from '../constants'
@@ -6,8 +6,7 @@ import { CONTRIBUTION } from '../constants/texts'
 import Header from '../components/Header/Header'
 import Button from '../components/Button/Button'
 
-const { height, width } = Dimensions.get('window');
-const IMG_HEIGHT = height/2;
+const IMG_HEIGHT = SIZES.ScreenHeight/2;
 
 export default function Contribution() {
   const scrollRef = useAnimatedRef();
@@ -110,23 +109,23 @@ const styles = StyleSheet.create({
   },
   header: { 
     position: "absolute", 
-    padding: 24, 
+    padding: PADDINGS.page, 
     paddingBottom: 12, 
     zIndex: 20, 
     borderBottomWidth: 1 
   },
   imgBg: {
-    width,
+    width: SIZES.ScreenWidth,
     height: IMG_HEIGHT,
     resizeMode: "cover", 
   },
   textContainer: {
     backgroundColor: COLORS.white,
-    paddingVertical:PADDINGS.sm,
+    paddingVertical:PADDINGS.page,
     paddingHorizontal: 12,
     display: "flex",
     flexDirection: "column",
-    gap: 10,
+    gap: PADDINGS.gap,
   },
   text: {
     fontFamily: FONT.articleRegular,
@@ -138,14 +137,14 @@ const styles = StyleSheet.create({
     marginBottom: 2
   },
   bottomBtn: {
-    width,
+    width: SIZES.ScreenWidth,
     backgroundColor: COLORS.white,
     display: "flex",
     justifyContent: "center",
     alignItems: "center"
   },
   btnContainer: {
-    width: width-(PADDINGS.sm*2),
+    width: SIZES.ScreenWidth-(PADDINGS.page*2),
     paddingVertical: 5,
   },
   contributeBtn: {

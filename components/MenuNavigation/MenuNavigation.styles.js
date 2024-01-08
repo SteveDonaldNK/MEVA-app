@@ -17,12 +17,12 @@ export default styles = StyleSheet.create({
         alignItems: "center"
     },
     iconContainer: {
-        paddingVertical: PADDINGS.sm,
+        paddingVertical: PADDINGS.page,
         flex: 1,
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        gap: PADDINGS.sm,
+        gap: PADDINGS.page,
     },
     label: {
         fontFamily: FONT.regular,

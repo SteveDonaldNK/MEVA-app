@@ -5,6 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SurveyProvider, { userSurvey } from './contexts/SurveyProvider';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Onboarding,  } from './screens';
 import Tabs from './navigation/Tabs'
 
@@ -52,12 +53,14 @@ function RootNavigator() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName='onboarding' screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
-        {
-          hasAnswered ? <Stack.Screen name='Tabs' component={Tabs} /> : <Stack.Screen name='onboarding' component={Onboarding} />
-        }
-      </Stack.Navigator>
-    </NavigationContainer>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName='onboarding' screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
+          {
+            hasAnswered ? <Stack.Screen name='Tabs' component={Tabs} /> : <Stack.Screen name='onboarding' component={Onboarding} />
+          }
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   )
 }

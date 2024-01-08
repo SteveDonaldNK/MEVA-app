@@ -20,7 +20,7 @@ export default function Welcome() {
                     <Button onPress={() => {
                       setHasAnswered(true);
                     }} name={'Ancien'} bg={COLORS.white} />                    
-                    <Button name={'Nouveau'} />                    
+                    <Button color={COLORS.white} name={'Nouveau'} />                    
                 </View>
             </View>
         </ImageBackground>

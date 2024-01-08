@@ -13,6 +13,7 @@ export default function NewsCard({ news }) {
 
     const row1 = news.images.slice(0, 2);
     const row2 = news.images.slice(2, 5);
+    const sliderImages = news.images.map(url => ({ url }));
 
     function trunc() {
         if(expanded) {
@@ -37,19 +38,20 @@ export default function NewsCard({ news }) {
         setItemLink(link)
     }
 
+
   return (
     <View style={styles.container}>
-        <Carousel isOpen={isOpen} setIsOpen={setIsOpen} images={news.images} itemIndex={news.images.indexOf(itemLink)} />
+        <Carousel isOpen={isOpen} setIsOpen={setIsOpen} images={sliderImages} itemIndex={news.images.indexOf(itemLink)} />
         <View style={styles.postHeader}>
             <Image style={styles.img} source={IMAGES.Avatar} resizeMode='cover' />
             <View style={styles.postInfo}>
                 <View style={styles.user}>
                     <Text style={styles.userName}>MEVA-Coron</Text>
-                    <TouchableOpacity activeOpacity={0.5}>
+                    <TouchableOpacity activeOpacity={0.5} onPress={() => null}>
                         <MoreIcon />
                     </TouchableOpacity>
                 </View>
-                <Text style={styles.time}>8h</Text>
+                <Text style={styles.time}>il y'a 8h</Text>
             </View>
         </View>
         {

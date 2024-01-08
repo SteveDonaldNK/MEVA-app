@@ -187,6 +187,12 @@ const books = [{
     author: 'Jerry Nolan',
     img: IMAGES.Book,
     category: 'book',
+    id: 8,
+}, {
+    name: 'le chemin du calvaire',
+    author: 'Jerry Nolan',
+    img: IMAGES.Book,
+    category: 'book',
     id: 7,
 }]
 

@@ -5,7 +5,7 @@ import SearchBar from '../components/SearchBar/SearchBar'
 import DiscoveryCard from '../components/DiscoveryCard/DiscoveryCard'
 import HomeCard from '../components/HomeCard/HomeCard';
 import { events, messages, prayers, testimonies } from '../constants/data'
-import { COLORS, PADDINGS } from '../constants'
+import { COLORS, PADDINGS, SIZES } from '../constants'
 import SectionHeader from '../components/SectionHeader/SectionHeader'
 import BookList from '../components/BookList/BookList';
 
@@ -38,23 +38,23 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   frame: {
-    height: "100%",
-    width: "100%",
+    flex: 1,
     backgroundColor: COLORS.white,
   },
   content: {
+    flex: 1,
     display: "flex", 
     gap: PADDINGS.element, 
     paddingVertical: PADDINGS.page, 
   },
   section: {
     display: "flex", 
-    gap: PADDINGS.sm
+    gap: PADDINGS.page
   },
   bookList: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    rowGap: 20
+    rowGap: PADDINGS.gapMd
   }
 })

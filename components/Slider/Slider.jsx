@@ -1,5 +1,6 @@
 import { View, FlatList } from 'react-native'
 import React from 'react'
+import { PADDINGS } from '../../constants'
 
 export default function Slider({data, component: Card}) {
 
@@ -13,7 +14,7 @@ export default function Slider({data, component: Card}) {
             <Card item={item} />
           )}
           keyExtractor={item => item.id || data.indexOf(item)}
-          contentContainerStyle={{ columnGap: 10, paddingHorizontal: 24}}
+          contentContainerStyle={{ columnGap: PADDINGS.gap, paddingHorizontal: PADDINGS.page}}
           horizontal
         />
     </View>

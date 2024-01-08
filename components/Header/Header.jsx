@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import styles from './Header.styles'
 import { CalendarIcon } from '../../constants/icons'
@@ -13,9 +13,9 @@ export default function Header({ heading, subHeading, icon, style, headingStyle,
         </View>
         {
             icon && 
-            <View>
+            <TouchableOpacity activeOpacity={0.5} onPress={() => null}>
                 <CalendarIcon />
-            </View>
+            </TouchableOpacity>
         }
     </Animated.View>
   )

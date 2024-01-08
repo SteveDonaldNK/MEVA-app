@@ -1,3 +1,7 @@
+import { Dimensions } from "react-native";
+
+const { height, width } = Dimensions.get("screen");
+
 const COLORS = {
     primary: "#141829",
     secondary: "#434654",
@@ -35,12 +39,15 @@ const SIZES = {
     xxl: 24,
     sxl: 32,
     full: "100%",
+    ScreenHeight: height,
+    ScreenWidth: width
 };
 
 const PADDINGS = {
-    sm: 15,
-    page: 24,
-    element: 30,
+    page: 15,
+    element: 25,
+    gap: 10,
+    gapMd: 20,
 }
 
 export {

@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { COLORS, FONT, PADDINGS, SIZES } from "../../constants";
 
 const flexbox = {
@@ -7,14 +7,12 @@ const flexbox = {
     alignItems: "center",
 }
 
-const { height, width } = Dimensions.get('window');
-
 export default styles = StyleSheet.create({
     container: {
-        paddingVertical: PADDINGS.sm,
+        paddingVertical: PADDINGS.page,
         paddingHorizontal: PADDINGS.page,
         display: "flex",
-        gap: PADDINGS.sm - 5,
+        gap: PADDINGS.page - 5,
     },
     postHeader: {
         ...flexbox,
@@ -33,12 +31,12 @@ export default styles = StyleSheet.create({
     },
     userName: {
         fontFamily: FONT.articleBold,
-        fontSize: SIZES.xs,
+        fontSize: SIZES.xs-1,
         color: COLORS.dark,
     },
     time: {
-        fontFamily: FONT.articleRegular,
-        fontSize: SIZES.xs,
+        fontFamily: FONT.articleMedium,
+        fontSize: SIZES.xs-1,
         color: COLORS.tertiary,
     },
     postBody: {
@@ -53,7 +51,7 @@ export default styles = StyleSheet.create({
     },
     postMediaContainer: {
         width: SIZES.full,
-        height: width/1.8,
+        height: SIZES.ScreenWidth/1.8,
         display: "flex",
         gap: 2
     },
@@ -82,7 +80,7 @@ export default styles = StyleSheet.create({
         alignItems: "center"
     },
     imagesLeft: {
-        fontSize: height*0.045,
+        fontSize: SIZES.ScreenHeight*0.045,
         color: COLORS.white,
     }
 })
