@@ -1,15 +1,15 @@
 import { View, SafeAreaView, ScrollView, StyleSheet } from 'react-native'
 import React from 'react'
-import Slider from '../components/Slider/Slider'
-import SearchBar from '../components/SearchBar/SearchBar'
-import DiscoveryCard from '../components/DiscoveryCard/DiscoveryCard'
-import HomeCard from '../components/HomeCard/HomeCard';
-import { events, messages, prayers, testimonies } from '../constants/data'
-import { COLORS, PADDINGS, SIZES } from '../constants'
-import SectionHeader from '../components/SectionHeader/SectionHeader'
-import BookList from '../components/BookList/BookList';
+import Slider from '../../components/Slider/Slider'
+import SearchBar from '../../components/SearchBar/SearchBar'
+import DiscoveryCard from '../../components/DiscoveryCard/DiscoveryCard'
+import HomeCard from '../../components/HomeCard/HomeCard';
+import { events, messages, prayers, testimonies } from '../../constants/data'
+import { COLORS, PADDINGS, SIZES } from '../../constants'
+import SectionHeader from '../../components/SectionHeader/SectionHeader'
+import BookList from '../../components/BookList/BookList';
 
-export default function Home() {
+export default function Home({ navigation }) {
   const data = [messages[0], testimonies[0], prayers[0]]
   
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       >
         <View style={styles.content}>
           <SearchBar />
-          <Slider data={data} component={HomeCard}/>
+          <Slider data={data} navigation={navigation} component={HomeCard}/>
           <View style={styles.section}>
             <SectionHeader heading="Decouvrir" link='' />
             <Slider data={events} component={DiscoveryCard} />

@@ -1,8 +1,8 @@
 import { SafeAreaView, StyleSheet } from 'react-native'
-import { COLORS, PADDINGS } from '../constants'
+import { COLORS, PADDINGS } from '../../constants'
 import React from 'react'
-import SearchBar from '../components/SearchBar/SearchBar'
-import NewsList from '../components/NewsList/NewsList'
+import SearchBar from '../../components/SearchBar/SearchBar'
+import NewsList from '../../components/NewsList/NewsList'
 
 export default function News() {
 

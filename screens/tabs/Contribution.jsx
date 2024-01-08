@@ -1,10 +1,10 @@
 import { View, SafeAreaView, StyleSheet, Text } from 'react-native'
 import Animated, { interpolate, interpolateColor, useAnimatedRef, useAnimatedStyle, useScrollViewOffset } from 'react-native-reanimated'
 import React from 'react'
-import { COLORS, FONT, IMAGES, PADDINGS, SIZES } from '../constants'
-import { CONTRIBUTION } from '../constants/texts'
-import Header from '../components/Header/Header'
-import Button from '../components/Button/Button'
+import { COLORS, FONT, IMAGES, PADDINGS, SIZES } from '../../constants'
+import { CONTRIBUTION } from '../../constants/texts'
+import Header from '../../components/Header/Header'
+import Button from '../../components/Button/Button'
 
 const IMG_HEIGHT = SIZES.ScreenHeight/2;
 

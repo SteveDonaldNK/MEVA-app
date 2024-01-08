@@ -1,12 +1,12 @@
 import { View, SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
-import Header from '../components/Header/Header'
-import SearchBar from '../components/SearchBar/SearchBar'
-import Slider from '../components/Slider/Slider'
-import { books, library } from '../constants/data'
-import { COLORS, PADDINGS, SIZES } from '../constants'
-import LibraryCategoryCard from '../components/LibraryCategoryCard/LibraryCategoryCard'
-import LibraryBookList from '../components/LibraryBookList/LibraryBookList'
+import Header from '../../components/Header/Header'
+import SearchBar from '../../components/SearchBar/SearchBar'
+import Slider from '../../components/Slider/Slider'
+import { books, library } from '../../constants/data'
+import { COLORS, PADDINGS, SIZES } from '../../constants'
+import LibraryCategoryCard from '../../components/LibraryCategoryCard/LibraryCategoryCard'
+import LibraryBookList from '../../components/LibraryBookList/LibraryBookList'
 
 export default function Library() {
   return (

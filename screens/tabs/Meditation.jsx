@@ -1,9 +1,9 @@
 import { View, StyleSheet, SafeAreaView } from 'react-native'
-import { COLORS, PADDINGS } from '../constants'
+import { COLORS, PADDINGS } from '../../constants'
 import React from 'react'
-import Header from '../components/Header/Header'
-import { MEDITATION } from '../constants/texts'
-import MenuNavigation from '../components/MenuNavigation/MenuNavigation'
+import Header from '../../components/Header/Header'
+import { MEDITATION } from '../../constants/texts'
+import MenuNavigation from '../../components/MenuNavigation/MenuNavigation'
 
 export default function Meditation() {
   return (

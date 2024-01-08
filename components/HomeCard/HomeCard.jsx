@@ -7,7 +7,7 @@ import _ from 'lodash';
 import Pill from '../Pill/Pill';
 import Overlay from '../Overlay/Overlay';
 
-export default function HomeCard({item}) {
+export default function HomeCard({navigation, item}) {
     const {category, title} = item;
 
     function findImage() {
@@ -37,7 +37,7 @@ export default function HomeCard({item}) {
               </View>
               <View style={styles.btnContainer}>
                   <Pill />
-                  <Button style={styles.btn} bg={COLORS.white} name={'voir'} variant="pill" />
+                  <Button onPress={() => navigation.navigate("audio")} style={styles.btn} bg={COLORS.white} name={'voir'} variant="pill" />
               </View>
             </View>
         </View>

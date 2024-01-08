@@ -8,6 +8,7 @@ import SurveyProvider, { userSurvey } from './contexts/SurveyProvider';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Onboarding,  } from './screens';
 import Tabs from './navigation/Tabs'
+import Audio from './screens/audio/Audio';
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -59,6 +60,7 @@ function RootNavigator() {
           {
             hasAnswered ? <Stack.Screen name='Tabs' component={Tabs} /> : <Stack.Screen name='onboarding' component={Onboarding} />
           }
+          <Stack.Screen name='audio' component={Audio} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
