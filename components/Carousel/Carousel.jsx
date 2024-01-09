@@ -8,7 +8,6 @@ export default function Carousel({ isOpen, setIsOpen, images, itemIndex }) {
     function closeModal() {
         setIsOpen(false);
     }
-    console.log(images)
 
     return (
         <Modal

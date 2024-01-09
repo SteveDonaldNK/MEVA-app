@@ -7,7 +7,6 @@ export default function Slider({data, navigation, component: Card}) {
   return (
     <View>
       <FlatList
-          overScrollMode='never'
           showsHorizontalScrollIndicator={false}
           data={data}
           renderItem={({item}) => (
