@@ -3,6 +3,7 @@ import React from 'react'
 import { COLORS, IMAGES, SIZES } from '../../constants'
 import MediaHeader from '../../components/MediaHeader/MediaHeader'
 import Overlay from '../../components/Overlay/Overlay'
+import SeekBar from './../../components/SeekBar/SeekBar';
 
 export default function Audio({navigation}) {
   return (
@@ -12,7 +13,7 @@ export default function Audio({navigation}) {
             <Overlay />
         </ImageBackground>
         <View style={styles.controllerContainer}>
-            
+            <SeekBar />
         </View>
     </SafeAreaView>
   )
