@@ -14,6 +14,12 @@ import PrayIcon from "../assets/icons/pray.svg";
 import TestimonyIcon from "../assets/icons/testimony.svg";
 import MoreIcon from "../assets/icons/more.svg";
 
+import LoopIcon from "../assets/icons/loop.svg"
+import ShuffleIcon from "../assets/icons/shuffle.svg"
+import PlayIcon from "../assets/icons/play.svg"
+import LeftControlIcon from "../assets/icons/left-control.svg"
+import RightControlIcon from "../assets/icons/right-control.svg"
+
 export {
     HomeIcon,
     MeditationIcon,
@@ -29,4 +35,9 @@ export {
     PrayIcon,
     TestimonyIcon,
     MoreIcon,
+    LoopIcon,
+    PlayIcon,
+    LeftControlIcon,
+    RightControlIcon,
+    ShuffleIcon,
 };

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS, PADDINGS, SIZES } from "../../constants";
+import { COLORS, FONT, PADDINGS, SIZES } from "../../constants";
 
 export default styles = StyleSheet.create({
     container: {
@@ -19,5 +19,12 @@ export default styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: COLORS.white,
         borderRadius: 50,
+    },
+    title: {
+        fontFamily: FONT.regular,
+        fontSize: SIZES.lg,
+        textTransform: "capitalize",
+        color: COLORS.white,
+        letterSpacing: 1,
     }
 })

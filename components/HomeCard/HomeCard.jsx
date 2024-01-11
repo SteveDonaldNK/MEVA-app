@@ -37,7 +37,7 @@ export default function HomeCard({navigation, item}) {
               </View>
               <View style={styles.btnContainer}>
                   <Pill />
-                  <Button onPress={() => navigation.navigate("audio")} style={styles.btn} bg={COLORS.white} name={'voir'} variant="pill" />
+                  <Button onPress={() => navigation.navigate("audio", { title: category})} style={styles.btn} bg={COLORS.white} name={'voir'} variant="pill" />
               </View>
             </View>
         </View>
