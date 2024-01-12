@@ -13,10 +13,10 @@ export default function Library() {
     <SafeAreaView style={styles.frame}>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
-          <Header style={styles.header} heading={"Bibliotheque"} subHeading={"Livres chretiens, Bibles et cantiques"} />
+          <Header viewStyle={styles.header} heading={"Bibliotheque"} subHeading={"Livres chretiens, Bibles et cantiques"} />
           <SearchBar />
           <Slider data={library} component={LibraryCategoryCard}  />
-          <Header headingStyle={styles.sectionHeader} style={styles.header} heading="Pour votre lecture" />
+          <Header headingStyle={styles.sectionHeader} viewStyle={styles.header} heading="Pour votre lecture" />
           <View style={styles.bookContainer}>
             <LibraryBookList books={books} />
           </View>

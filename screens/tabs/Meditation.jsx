@@ -4,12 +4,13 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import { MEDITATION } from '../../constants/texts'
 import MenuNavigation from '../../components/MenuNavigation/MenuNavigation'
+import { CalendarIcon } from '../../constants/icons'
 
 export default function Meditation() {
   return (
     <SafeAreaView style={styles.frame}>
       <View style={styles.container}>
-        <Header icon heading={MEDITATION.heading} subHeading={MEDITATION.subheading} />
+        <Header RightIcon={CalendarIcon} heading={MEDITATION.heading} subHeading={MEDITATION.subheading} />
         <MenuNavigation links={MEDITATION.links} />
       </View>
     </SafeAreaView>

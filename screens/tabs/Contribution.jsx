@@ -64,7 +64,7 @@ export default function Contribution() {
       <Header 
         headerAnimatedStyle={headerAnimatedStyle}
         textAnimatedStyle={textAnimatedStyle}
-        style={styles.header} 
+        viewStyle={styles.header} 
         heading={"Contributions"} 
       />
       <Animated.ScrollView

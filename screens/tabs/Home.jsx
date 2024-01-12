@@ -21,7 +21,7 @@ export default function Home({ navigation }) {
           <SearchBar />
           <Slider data={data} navigation={navigation} component={HomeCard}/>
           <View style={styles.section}>
-            <SectionHeader heading="Decouvrir" link='News' />
+            <SectionHeader heading="Decouvrir" link='events' />
             <Slider data={events} component={DiscoveryCard} />
           </View>
           <View style={styles.section}>
