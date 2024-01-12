@@ -6,19 +6,19 @@ import { View } from 'react-native';
 export default function TabIcon({route, isFocused}) {
     let Icon = null;
     switch (route) {
-        case 'Home':
+        case 'home':
             Icon = HomeIcon;
             break;
-        case 'Meditation':
+        case 'meditation':
             Icon = MeditationIcon;
             break;
-        case 'News':
+        case 'news':
             Icon = NewsIcon;
             break;
-        case 'Library':
+        case 'library':
             Icon = LibraryIcon;
             break;
-        case 'Contribution':
+        case 'contribution':
             Icon = ContributionIcon;
             break;
         default:

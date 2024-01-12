@@ -8,6 +8,7 @@ import SurveyProvider, { userSurvey } from './contexts/SurveyProvider';
 import { Onboarding,  } from './screens';
 import Tabs from './navigation/Tabs'
 import Audio from './screens/audio/Audio';
+import Events from './screens/Events/Events';
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -56,9 +57,10 @@ function RootNavigator() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='onboarding' screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
         {
-          hasAnswered ? <Stack.Screen name='Tabs' component={Tabs} /> : <Stack.Screen name='onboarding' component={Onboarding} />
+          hasAnswered ? <Stack.Screen name='tabs' component={Tabs} /> : <Stack.Screen name='onboarding' component={Onboarding} />
         }
         <Stack.Screen name='audio' component={Audio} />
+        <Stack.Screen name='events' component={Events} />
       </Stack.Navigator>
     </NavigationContainer>
   )

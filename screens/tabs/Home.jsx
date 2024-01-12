@@ -5,7 +5,7 @@ import SearchBar from '../../components/SearchBar/SearchBar'
 import DiscoveryCard from '../../components/DiscoveryCard/DiscoveryCard'
 import HomeCard from '../../components/HomeCard/HomeCard';
 import { events, messages, prayers, testimonies } from '../../constants/data'
-import { COLORS, PADDINGS, SIZES } from '../../constants'
+import { COLORS, PADDINGS } from '../../constants'
 import SectionHeader from '../../components/SectionHeader/SectionHeader'
 import BookList from '../../components/BookList/BookList';
 
@@ -21,7 +21,7 @@ export default function Home({ navigation }) {
           <SearchBar />
           <Slider data={data} navigation={navigation} component={HomeCard}/>
           <View style={styles.section}>
-            <SectionHeader heading="Decouvrir" link='' />
+            <SectionHeader heading="Decouvrir" link='News' />
             <Slider data={events} component={DiscoveryCard} />
           </View>
           <View style={styles.section}>

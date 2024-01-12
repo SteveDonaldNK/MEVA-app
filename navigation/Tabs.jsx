@@ -8,11 +8,11 @@ export default function Tabs() {
 
   return (
     <Tab.Navigator screenOptions={{headerShown: false}} tabBar={props => <TabBar {...props}/>}>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Meditation" component={Meditation}/>
-      <Tab.Screen name="News" component={News}/>
-      <Tab.Screen name="Library" component={Library}/>
-      <Tab.Screen name="Contribution" component={Contribution}/>
+      <Tab.Screen name="home" component={Home} />
+      <Tab.Screen name="meditation" component={Meditation}/>
+      <Tab.Screen name="news" component={News}/>
+      <Tab.Screen name="library" component={Library}/>
+      <Tab.Screen name="contribution" component={Contribution}/>
     </Tab.Navigator>
   )
 }

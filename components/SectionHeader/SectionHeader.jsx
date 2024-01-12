@@ -9,7 +9,7 @@ export default function SectionHeader({heading, link}) {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>{heading}</Text>
-      <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("News")}>
+      <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate(link)}>
         <Text style={styles.text}>voir plus</Text>
       </TouchableOpacity>
     </View>
