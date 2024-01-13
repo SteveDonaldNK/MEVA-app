@@ -9,6 +9,7 @@ import { Onboarding,  } from './screens';
 import Tabs from './navigation/Tabs'
 import Audio from './screens/audio/Audio';
 import Events from './screens/Events/Events';
+import EventDetails from './screens/Events/EventDetails';
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -61,6 +62,7 @@ function RootNavigator() {
         }
         <Stack.Screen name='audio' component={Audio} />
         <Stack.Screen name='events' component={Events} />
+        <Stack.Screen name='event-details' component={EventDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   )

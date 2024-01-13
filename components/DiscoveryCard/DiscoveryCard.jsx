@@ -5,10 +5,13 @@ import { LocationIcon } from '../../constants/icons'
 import { COLORS } from '../../constants'
 import _ from 'lodash'
 import Overlay from '../Overlay/Overlay'
+import { useNavigation } from '@react-navigation/native';
 
 export default function DiscoveryCard({item}) {
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity activeOpacity={0.85} onPress={() => null}>
+    <TouchableOpacity activeOpacity={0.85} onPress={() => navigation.navigate("event-details", item)}>
       <ImageBackground resizeMode='cover' source={{uri: item.image}} style={styles.container}>
         <Overlay />
         <View style={styles.content}>

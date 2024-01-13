@@ -4,9 +4,9 @@ import { COLORS, FONT, PADDINGS, SIZES } from "../../constants";
 export default styles = StyleSheet.create({
     btn: {
         width: SIZES.full,
-        padding: PADDINGS.gap,
+        padding: PADDINGS.gap - 2,
         backgroundColor: COLORS.white,
-        borderRadius: 8,
+        borderRadius: 10,
         display: "flex",
         flexDirection: "row",
         gap: PADDINGS.gap,

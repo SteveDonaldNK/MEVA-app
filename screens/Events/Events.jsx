@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     },
     header: {
         padding: PADDINGS.page,
+        paddingVertical: PADDINGS.page - 5,
         backgroundColor: COLORS.white
     }
 })
