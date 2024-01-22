@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import EventList from '../../components/EventList/EventList'
 import { COLORS, PADDINGS } from '../../constants'
@@ -10,6 +10,17 @@ export default function Events() {
   return (
     <SafeAreaView style={styles.frame}>
         <Header LeftIcon={BackBtn} RightIcon={CalendarIcon} viewStyle={styles.header} heading={"Evenements"} />
+        <View style={{display: "flex", flexDirection: "row", width: "100%", height: 40, alignItems: "center"}}>
+          <TouchableOpacity style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+            <Text>A venir</Text>
+          </TouchableOpacity>
+          <TouchableOpacity  style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+            <Text>En cours</Text>
+          </TouchableOpacity>
+          <TouchableOpacity  style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+            <Text>Passe</Text>
+          </TouchableOpacity>
+        </View>
         <EventList />
     </SafeAreaView>
   )
